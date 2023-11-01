@@ -1,0 +1,85 @@
+<html lang="es">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+    const host = 'brpfk2nakiypfd975ofc-mysql.services.clever-cloud.com'; 
+    const port = 3306;
+  </script>
+  <script src="formularios.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolsa de trabajo invertida</title>
+    <link rel="stylesheet" type="text/css" href="PP2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6ad4407019.js" crossorigin="anonymous"></script>
+    <style>
+        /* Estilo para ocultar la primera interfaz */
+        #primeraInterfaz {
+            display: block;
+            /* Puedes establecer 'none' para ocultarla inicialmente */
+        }
+
+        /* Estilo para ocultar la segunda interfaz */
+        #segundaInterfaz {
+            display: none;
+        }
+    </style>
+</head>
+<header>
+    <div class="avatar"
+        style="background-image: url(https://ies9021.edu.ar/wp-content/uploads/2020/11/logo-para-la-web.png)"></div>
+</header>
+
+<body>
+    <div id="segundaInterfaz">
+        <h2>Registro</h2>
+        <script src ="formularios.js"> </script>
+        <form id="registroForm" method="post">
+            <title>Registro</title>
+            <label for="seleccionar">Seleccionar: </label>
+            <select id="seleccionar" name="opcion">
+                <option value="alumno">Alumno</option>
+                <option value="empresa">Empresa</option>
+            </select>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+            <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+            <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+            <input type="text" id="cuil" name="cuil" placeholder="CUIL" required>
+            <button type="submit" id="registrarButton">Registrar cuenta</button>
+        </form>
+        <button onclick="mostrarInicio()">Atras</button>
+    </div>
+
+    <div id="primeraInterfaz">
+        <title>Bolsa de trabajo invertida</title>
+        </head>
+
+        <body>
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm" method="post">
+
+                <input type="text" id="cuil" name="cuil" placeholder="CUIL" required><br>
+                <input type="password" id="password" name="password" placeholder="Contraseña" required><br>
+                <button type="submit">Iniciar Sesión</button>
+
+                <label onclick="mostrarRegistro()">Registrarse</label>
+            </form>
+
+            <p id="responseMessage"></p>
+
+           
+        </body>
+
+    </div>
+
+</html>
+
+<script src="Interfaces.js"></script>
+
+
+</html>
