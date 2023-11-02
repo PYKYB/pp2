@@ -1,3 +1,5 @@
+//formularios.js
+
 document.addEventListener("DOMContentLoaded", function () {
     const registrarButton = document.getElementById("registrarButton");
     registrarButton.addEventListener("click", enviarFormulario);
@@ -19,7 +21,7 @@ function enviarFormulario() {
     };
 
     // Realiza una solicitud POST al servidor para enviar los datos
-    fetch('/registro', { // Cambié la URL a '/registro' para que coincida con el servidor
+    fetch('/registro', { // servidor
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -35,6 +37,10 @@ function enviarFormulario() {
         console.error('Error al enviar los datos:', error);
     });
 }
+
+  
+
+
 
 
   
